@@ -1,0 +1,11 @@
+{
+  "name": "@challenge/library-utils",
+  "version": "1.0.0",
+  "description": "Generic utility helper functions",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@challenge/types": "*"
+  }
+}
