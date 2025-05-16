@@ -1,2 +1,6 @@
-export type { ZodEffects, ZodObject, ZodSchema, ZodTypeAny } from 'zod';
-export { z } from 'zod';
+import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi";
+import { z } from "zod";
+
+extendZodWithOpenApi(z);
+
+export { z };

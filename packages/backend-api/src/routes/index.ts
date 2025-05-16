@@ -1,1 +1,2 @@
-export * from './helloRoute';
+export * from "./buildingRoute";
+export * from "./geocodeRoute";

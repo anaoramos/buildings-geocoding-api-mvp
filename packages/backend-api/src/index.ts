@@ -1,10 +1,10 @@
-import { createBackendApi } from './api';
+import { createBackendApi } from "./api";
 
 const start = async () => {
   const api = createBackendApi();
 
-  const port = parseInt(process.env.PORT ?? '3000');
-  const host = process.env.HOST ?? 'localhost';
+  const port = parseInt(process.env.PORT ?? "3000");
+  const host = process.env.HOST ?? "localhost";
 
   try {
     api.ready(() => {

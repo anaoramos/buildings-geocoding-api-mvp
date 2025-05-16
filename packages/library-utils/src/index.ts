@@ -1,1 +1,1 @@
-export const hello = (): string => 'Happy challenge!';
+export * from "./apiError";

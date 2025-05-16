@@ -1,0 +1,39 @@
+# Node
+node_modules/
+dist/
+build/
+*.log*
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
+.env.*.local
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Testing
+coverage/
+*.lcov
+
+# OpenAPI artifacts
+openapi.json
+openapi.yaml
+
+# NX-specific
+nx.json
+.project.json
+.project-graph/
+.cache/
+tmp/
+.nx
+
+# VSCode Nx plugin files
+nx-console.log

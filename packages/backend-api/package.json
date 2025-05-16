@@ -3,32 +3,34 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "test:unit": "jest --config=../../jest.config.ts --testPathPattern=backend-api",
     "build": "npm run clean && npm install && tsup-node",
     "build:watch": "npm run build -- --watch",
-    "dev": "npx ts-node dist/index.js",
-    "dev:watch": "nodemon --watch dist --exec ts-node dist/index.js",
-    "start": "concurrently \"npm run build:watch\" \"sleep 20 && npm run dev:watch\" --kill-others"
+    "dev": "npx ts-node dist/index.mjs",
+    "dev:watch": "nodemon --watch dist --exec ts-node dist/index.mjs",
+    "start": "concurrently \"npm run build:watch\" \"sleep 20 && npm run dev:watch\" --kill-others",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
-  "engines": {
-    "node": "22"
-  },
-  "type": "module",
-  "main": "index.ts",
   "dependencies": {
+    "@asteasolutions/zod-to-openapi": "^7.3.0",
     "@challenge/database-services": "*",
     "@challenge/library-schemas": "*",
     "@challenge/library-utils": "*",
     "@challenge/types": "*",
-    "fastify": "5.1.0"
+    "@fastify/auth": "^5.0.2",
+    "fastify": "^5.3.3",
+    "fastify-type-provider-zod": "^4.0.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "22.13.9",
-    "concurrently": "9.1.0",
-    "nodemon": "3.1.7",
-    "ts-node": "10.9.2",
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "ts-jest": "^29.3.3",
+    "ts-node": "^10.9.2",
     "tsup": "8.4.0",
     "typescript": "5.8.2"
-  },
-  "private": true
+  }
 }
