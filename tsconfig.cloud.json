@@ -17,7 +17,9 @@
     // Update when adding new local package
     "paths": {
       "@challenge/backend-api": ["packages/backend-api/src/index.ts"],
-      "@challenge/database-services": ["packages/database-services/src/index.ts"],
+      "@challenge/database-services": [
+        "packages/database-services/src/index.ts"
+      ],
       "@challenge/library-schemas": ["packages/library-schemas/src/index.ts"],
       "@challenge/library-utils": ["packages/library-utils/src/index.ts"],
       "@challenge/types": ["packages/types/src/index.ts"]
